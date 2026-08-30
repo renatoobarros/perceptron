@@ -1,57 +1,21 @@
-[English](docs/README.en.md) | **Português** | [简体中文](docs/README.zh-CN.md)
-
 # Implementação de Rede Neural Perceptron
 
-Uma implementação educacional de Perceptron em Python puro para compreender os fundamentos das redes neurais artificiais.
+**Uma implementação educacional em Python puro para compreender os fundamentos das redes neurais artificiais e dos algoritmos de aprendizado de máquina.**
 
----
+[English](docs/README.en.md) · **Português do Brasil** · [简体中文](docs/README.zh-CN.md)
 
-## Sumário
-
-- [Sobre o Projeto](#sobre-o-projeto)
-  - [Características Principais](#características-principais)
-  - [Aplicações Práticas](#aplicações-práticas)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Resultados Obtidos](#resultados-obtidos)
-  - [Métricas de Desempenho](#métricas-de-desempenho)
-  - [Evolução do Treinamento](#evolução-do-treinamento)
-- [Como Executar](#como-executar)
-  - [Pré-requisitos](#pré-requisitos)
-  - [Executando o Projeto](#executando-o-projeto)
-- [Conceitos Fundamentais](#conceitos-fundamentais)
-  - [O que é um Perceptron?](#o-que-é-um-perceptron)
-  - [Processo de Funcionamento](#processo-de-funcionamento)
-- [Processo de Treinamento](#processo-de-treinamento)
-  - [Dados de Treinamento](#dados-de-treinamento)
-  - [Parâmetros do Modelo](#parâmetros-do-modelo)
-  - [Algoritmo de Treinamento](#algoritmo-de-treinamento)
-- [Fórmulas Matemáticas](#fórmulas-matemáticas)
-  - [Combinação Linear](#combinação-linear)
-  - [Função de Ativação (Degrau)](#função-de-ativação-degrau)
-  - [Regra Delta (Ajuste de Pesos)](#regra-delta-ajuste-de-pesos)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-  - [Descrição dos Arquivos](#descrição-dos-arquivos)
-- [Aprendizados](#aprendizados)
-  - [O que Funciona Bem](#o-que-funciona-bem)
-  - [Limitações Identificadas](#limitações-identificadas)
-  - [Insights dos Pesos Finais](#insights-dos-pesos-finais)
-- [Contribuição](#contribuição)
-  - [Ideias para Contribuição](#ideias-para-contribuição)
-- [Licença](#licença)
-- [Autor](#autor)
-
----
+Você pode explorar e executar a implementação completa diretamente no notebook [`notebooks/perceptron.ipynb`](notebooks/perceptron.ipynb) ou acompanhar as explicações e análises a seguir.
 
 ## Sobre o Projeto
 
-Este projeto implementa um Perceptron do zero em Python, sem o uso de bibliotecas externas de machine learning, com o objetivo de solidificar o entendimento sobre redes neurais artificiais e algoritmos de aprendizado de máquina.
+Este projeto implementa um Perceptron do zero em Python, sem o uso de bibliotecas externas de machine learning, com o objetivo de solidificar o entendimento sobre redes neurais artificiais.
 
 ### Características Principais
 
-- **Implementação Pura**: Código Python sem dependências externas de aprendizado de máquina.
+- **Implementação Pura**: Código Python sem dependências externas.
 - **Fins Educacionais**: Explicações conceituais detalhadas a cada etapa.
 - **Visualização Detalhada**: Acompanhamento do processo de treinamento época por época.
-- **Convergência Garantida**: Convergência para erro zero em conjuntos de dados linearmente separáveis.
+- **Convergência Garantida**: Demonstração matemática de convergência para erro zero em dados linearmente separáveis.
 
 ### Aplicações Práticas
 
@@ -63,8 +27,6 @@ O Perceptron pode ser aplicado conceitualmente em diversos cenários:
 - **Logística**: Estimativas de faixas de entrega com base em variáveis lineares.
 - **Segurança da Informação**: Detecção inicial de padrões em atividades suspeitas.
 
----
-
 ## Tecnologias Utilizadas
 
 | Tecnologia | Versão | Finalidade |
@@ -72,8 +34,6 @@ O Perceptron pode ser aplicado conceitualmente em diversos cenários:
 | Python | 3.7+ | Linguagem de programação principal |
 | Jupyter Notebook | Recente | Ambiente para execução interativa e documentação |
 | Markdown | - | Formatação da documentação |
-
----
 
 ## Resultados Obtidos
 
@@ -96,9 +56,7 @@ O Perceptron pode ser aplicado conceitualmente em diversos cenários:
 Época 12: Erros = 0  | W1 = 0.23, W2 = -0.14 (Convergência atingida)
 ```
 
-> **Resultado**: O modelo convergiu com erro zero na 12ª época, demonstrando eficácia na separação de classes linearmente separáveis.
-
----
+O modelo convergiu com erro zero na 12ª época, demonstrando eficácia na separação de classes linearmente separáveis.
 
 ## Como Executar
 
@@ -122,7 +80,7 @@ pip install jupyter
    cd perceptron
    ```
 
-2. **Inicie o Jupyter Notebook com o arquivo em Português:**
+2. **Inicie o Jupyter Notebook:**
    ```bash
    jupyter notebook notebooks/perceptron.ipynb
    ```
@@ -132,11 +90,7 @@ pip install jupyter
    jupyter lab notebooks/perceptron.ipynb
    ```
 
----
-
 ## Conceitos Fundamentais
-
-### O que é um Perceptron?
 
 O Perceptron é o modelo mais elementar de rede neural artificial com aprendizado supervisionado, inspirado no neurônio biológico. Ele processa informações por meio de combinação linear e aplicação de função de ativação:
 
@@ -155,8 +109,6 @@ graph LR
 | 1. Combinação Linear | Multiplica cada entrada pelo seu respectivo peso e soma | `u = (x1 * w1) + (x2 * w2)` |
 | 2. Função de Ativação | Aplica a função degrau para determinar a saída binária | `y = 1 se u >= 0, senão 0` |
 | 3. Ajuste de Pesos | Ajusta pesos quando a saída difere do valor desejado | `w_novo = w_atual + taxa * erro * x` |
-
----
 
 ## Processo de Treinamento
 
@@ -202,8 +154,6 @@ for epoca in range(limite_epocas):
         break
 ```
 
----
-
 ## Fórmulas Matemáticas
 
 ### Combinação Linear
@@ -232,42 +182,6 @@ wi(novo) = wi(atual) + eta * erro * xi
 - `erro`: `saida_desejada - saida_predita`
 - `xi`: Valor da entrada `i`
 
----
-
-## Estrutura do Projeto
-
-```text
-perceptron/
-├── docs/
-│   ├── licenses/
-│   │   ├── LICENSE.pt-BR       # Tradução da licença GNU GPL v3.0 para Português do Brasil
-│   │   └── LICENSE.zh-CN       # Tradução da licença GNU GPL v3.0 para Chinês Simplificado
-│   ├── README.en.md            # Documentação em Inglês
-│   └── README.zh-CN.md         # Documentação em Chinês Simplificado
-├── notebooks/
-│   ├── perceptron.en.ipynb     # Notebook com implementação em Inglês
-│   ├── perceptron.ipynb        # Notebook com implementação em Português
-│   └── perceptron.zh-CN.ipynb  # Notebook com implementação em Chinês Simplificado
-├── LICENSE                     # Texto oficial da licença GNU GPL v3.0 em Inglês
-└── README.md                   # Documentação principal em Português
-```
-
-### Descrição dos Arquivos
-
-| Arquivo | Descrição |
-|---------|-----------|
-| [`notebooks/perceptron.en.ipynb`](notebooks/perceptron.en.ipynb) | Jupyter Notebook com explicações e anotações em Inglês |
-| [`notebooks/perceptron.ipynb`](notebooks/perceptron.ipynb) | Jupyter Notebook contendo a implementação passo a passo em Português |
-| [`notebooks/perceptron.zh-CN.ipynb`](notebooks/perceptron.zh-CN.ipynb) | Jupyter Notebook com explicações e anotações em Chinês Simplificado |
-| [`docs/README.en.md`](docs/README.en.md) | Documentação do projeto em Inglês |
-| [`README.md`](README.md) | Documentação principal do projeto em Português |
-| [`docs/README.zh-CN.md`](docs/README.zh-CN.md) | Documentação do projeto em Chinês Simplificado |
-| [`LICENSE`](LICENSE) | Texto oficial da licença GNU General Public License v3.0 em Inglês |
-| [`docs/licenses/LICENSE.pt-BR`](docs/licenses/LICENSE.pt-BR) | Tradução de referência da licença GNU GPL v3.0 para Português do Brasil |
-| [`docs/licenses/LICENSE.zh-CN`](docs/licenses/LICENSE.zh-CN) | Tradução de referência da licença GNU GPL v3.0 para Chinês Simplificado |
-
----
-
 ## Aprendizados
 
 ### O que Funciona Bem
@@ -289,38 +203,10 @@ perceptron/
 | W1 | `+0.23` | Influência positiva: valores maiores favorecem a classe 1 |
 | W2 | `-0.14` | Influência negativa: valores maiores favorecem a classe 0 |
 
----
-
-## Contribuição
-
-Contribuições são bem-vindas para melhorias conceituais e novos experimentos.
-
-1. Faça um Fork do projeto
-2. Crie uma branch para sua modificação (`git checkout -b feature/minha-melhoria`)
-3. Faça o commit de suas alterações (`git commit -m 'Adiciona melhoria X'`)
-4. Envie para o branch remoto (`git push origin feature/minha-melhoria`)
-5. Abra um Pull Request
-
-### Ideias para Contribuição
-
-- Adicionar visualizações gráficas do plano de decisão durante o treinamento.
-- Implementar e comparar outras funções de ativação (como Sigmoide ou ReLU).
-- Incluir métricas adicionais de avaliação (como matriz de confusão e acurácia).
-- Testar com conjuntos de dados sintéticos adicionais.
-
----
-
 ## Licença
 
-Este projeto está licenciado sob os termos da **GNU General Public License v3.0 ou posterior (GPL-3.0-or-later / GPL v3+)**.
+Este projeto está sob a licença GNU General Public License v3.0 ou posterior (GPL-3.0-or-later). Consulte o arquivo [LICENSE](LICENSE) (oficial em inglês) ou a [tradução de referência em português](docs/licenses/LICENSE.pt-BR).
 
-- Para o texto legal oficial com validade jurídica, consulte o arquivo [`LICENSE`](LICENSE) (em Inglês).
-- Para fins de consulta e entendimento em Português, veja a tradução de referência em [`docs/licenses/LICENSE.pt-BR`](docs/licenses/LICENSE.pt-BR).
+## Contato
 
----
-
-## Autor
-
-Desenvolvido por Renato Barros.
-
-> "A jornada de mil quilômetros começa com um único passo." — Lao Tzu
+Renato Barros — [falecom@renatobarros.dev.br](mailto:falecom@renatobarros.dev.br)

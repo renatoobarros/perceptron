@@ -1,46 +1,10 @@
-**English** | [Português](../README.md) | [简体中文](README.zh-CN.md)
-
 # Perceptron Neural Network Implementation
 
-An educational pure Python implementation of the Perceptron to understand the fundamentals of artificial neural networks.
+**An educational pure Python implementation to understand the fundamentals of artificial neural networks and machine learning algorithms.**
 
----
+**English** · [Português do Brasil](../README.md) · [简体中文](README.zh-CN.md)
 
-## Table of Contents
-
-- [About the Project](#about-the-project)
-  - [Key Features](#key-features)
-  - [Practical Applications](#practical-applications)
-- [Technologies Used](#technologies-used)
-- [Experimental Results](#experimental-results)
-  - [Performance Metrics](#performance-metrics)
-  - [Training Progress](#training-progress)
-- [How to Run](#how-to-run)
-  - [Prerequisites](#prerequisites)
-  - [Running the Project](#running-the-project)
-- [Fundamental Concepts](#fundamental-concepts)
-  - [What is a Perceptron?](#what-is-a-perceptron)
-  - [Operational Workflow](#operational-workflow)
-- [Training Process](#training-process)
-  - [Training Data](#training-data)
-  - [Model Parameters](#model-parameters)
-  - [Training Algorithm](#training-algorithm)
-- [Mathematical Formulations](#mathematical-formulations)
-  - [Linear Combination](#linear-combination)
-  - [Activation Function (Step Function)](#activation-function-step-function)
-  - [Delta Rule (Weight Updates)](#delta-rule-weight-updates)
-- [Project Structure](#project-structure)
-  - [File Descriptions](#file-descriptions)
-- [Key Takeaways and Insights](#key-takeaways-and-insights)
-  - [Strengths](#strengths)
-  - [Identified Limitations](#identified-limitations)
-  - [Final Weight Insights](#final-weight-insights)
-- [Contributing](#contributing)
-  - [Contribution Ideas](#contribution-ideas)
-- [License](#license)
-- [Author](#author)
-
----
+You can explore and run the complete implementation directly in the notebook [`notebooks/perceptron.en.ipynb`](../notebooks/perceptron.en.ipynb) or follow the walkthrough and analysis below.
 
 ## About the Project
 
@@ -63,8 +27,6 @@ Conceptually, the Perceptron algorithm can be applied to various real-world scen
 - **Logistics**: Simple delivery bracket estimation based on linear factors.
 - **Information Security**: Preliminary pattern detection for suspicious activity.
 
----
-
 ## Technologies Used
 
 | Technology | Version | Purpose |
@@ -72,8 +34,6 @@ Conceptually, the Perceptron algorithm can be applied to various real-world scen
 | Python | 3.7+ | Core programming language |
 | Jupyter Notebook | Recent | Interactive development and documentation environment |
 | Markdown | - | Documentation formatting |
-
----
 
 ## Experimental Results
 
@@ -96,9 +56,7 @@ Epoch  2: Errors = 2  | W1 = 0.18, W2 = -0.14
 Epoch 12: Errors = 0  | W1 = 0.23, W2 = -0.14 (Convergence reached)
 ```
 
-> **Result**: The model converged with zero errors at epoch 12, demonstrating full separation of the linearly separable dataset.
-
----
+The model converged with zero errors at epoch 12, demonstrating full separation of the linearly separable dataset.
 
 ## How to Run
 
@@ -122,7 +80,7 @@ pip install jupyter
    cd perceptron
    ```
 
-2. **Launch Jupyter Notebook with the English notebook:**
+2. **Launch Jupyter Notebook:**
    ```bash
    jupyter notebook notebooks/perceptron.en.ipynb
    ```
@@ -132,11 +90,7 @@ pip install jupyter
    jupyter lab notebooks/perceptron.en.ipynb
    ```
 
----
-
 ## Fundamental Concepts
-
-### What is a Perceptron?
 
 The Perceptron is the simplest model of a supervised artificial neural network, inspired by biological neurons. It processes input signals through linear weighting followed by a threshold activation function:
 
@@ -155,8 +109,6 @@ graph LR
 | 1. Linear Combination | Multiplies inputs by their corresponding weights and computes the sum | `u = (x1 * w1) + (x2 * w2)` |
 | 2. Activation Function | Applies the Heaviside step function for binary output | `y = 1 if u >= 0 else 0` |
 | 3. Weight Adjustment | Updates weights whenever the predicted output deviates from the target | `w_new = w_current + rate * error * x` |
-
----
 
 ## Training Process
 
@@ -202,8 +154,6 @@ for epoca in range(limite_epocas):
         break
 ```
 
----
-
 ## Mathematical Formulations
 
 ### Linear Combination
@@ -232,43 +182,7 @@ wi(new) = wi(current) + eta * error * xi
 - `error`: `target_output - predicted_output`
 - `xi`: Input value for feature `i`
 
----
-
-## Project Structure
-
-```text
-perceptron/
-├── docs/
-│   ├── licenses/
-│   │   ├── LICENSE.pt-BR       # GNU GPL v3.0 translation in Brazilian Portuguese
-│   │   └── LICENSE.zh-CN       # GNU GPL v3.0 translation in Simplified Chinese
-│   ├── README.en.md            # Documentation in English
-│   └── README.zh-CN.md         # Documentation in Simplified Chinese
-├── notebooks/
-│   ├── perceptron.en.ipynb     # Jupyter Notebook with implementation in English
-│   ├── perceptron.ipynb        # Jupyter Notebook with implementation in Portuguese
-│   └── perceptron.zh-CN.ipynb  # Jupyter Notebook with implementation in Simplified Chinese
-├── LICENSE                     # Official GNU General Public License v3.0 text in English
-└── README.md                   # Documentation in Portuguese
-```
-
-### File Descriptions
-
-| File | Description |
-|------|-------------|
-| [`notebooks/perceptron.en.ipynb`](../notebooks/perceptron.en.ipynb) | Jupyter Notebook with step-by-step explanations and code in English |
-| [`notebooks/perceptron.ipynb`](../notebooks/perceptron.ipynb) | Jupyter Notebook containing step-by-step Perceptron code in Portuguese |
-| [`notebooks/perceptron.zh-CN.ipynb`](../notebooks/perceptron.zh-CN.ipynb) | Jupyter Notebook with step-by-step explanations and code in Simplified Chinese |
-| [`docs/README.en.md`](README.en.md) | English project documentation |
-| [`README.md`](../README.md) | Portuguese project documentation |
-| [`docs/README.zh-CN.md`](README.zh-CN.md) | Simplified Chinese project documentation |
-| [`LICENSE`](../LICENSE) | Official GNU General Public License v3.0 terms in English |
-| [`docs/licenses/LICENSE.pt-BR`](licenses/LICENSE.pt-BR) | Reference translation of GNU GPL v3.0 in Brazilian Portuguese |
-| [`docs/licenses/LICENSE.zh-CN`](licenses/LICENSE.zh-CN) | Reference translation of GNU GPL v3.0 in Simplified Chinese |
-
----
-
-## Key Takeaways and Insights
+## Key Insights and Takeaways
 
 ### Strengths
 
@@ -289,38 +203,10 @@ perceptron/
 | W1 | `+0.23` | Positive impact: larger values increase probability of class 1 |
 | W2 | `-0.14` | Negative impact: larger values increase probability of class 0 |
 
----
-
-## Contributing
-
-Contributions, issues, and feature requests are welcome.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Contribution Ideas
-
-- Add interactive visualizations for the decision boundary during training.
-- Implement additional activation functions (such as Sigmoid or ReLU) for comparison.
-- Add evaluation metrics (such as confusion matrix and precision/recall).
-- Test on additional synthetic classification datasets.
-
----
-
 ## License
 
-This project is licensed under the terms of the **GNU General Public License v3.0 or later (GPL-3.0-or-later / GPL v3+)**.
+This project is licensed under the terms of the GNU General Public License v3.0 or later (GPL-3.0-or-later). See the [`LICENSE`](../LICENSE) file for details.
 
-- For the official legal text with legal validity, see the [`LICENSE`](../LICENSE) file.
-- Unofficial reference translations are available in [`docs/licenses/LICENSE.pt-BR`](licenses/LICENSE.pt-BR) and [`docs/licenses/LICENSE.zh-CN`](licenses/LICENSE.zh-CN).
+## Contact
 
----
-
-## Author
-
-Developed by Renato Barros.
-
-> "A journey of a thousand miles begins with a single step." — Laozi
+Renato Barros — [falecom@renatobarros.dev.br](mailto:falecom@renatobarros.dev.br)
