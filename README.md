@@ -2,7 +2,7 @@
 
 **Uma implementação educacional em Python puro para compreender os fundamentos das redes neurais artificiais e dos algoritmos de aprendizado de máquina.**
 
-[English](docs/README.en.md) · **Português do Brasil** · [简体中文](docs/README.zh-CN.md)
+[English](docs/README.en.md) · **Português** · [简体中文](docs/README.zh-CN.md)
 
 Você pode explorar e executar a implementação completa diretamente no notebook [`notebooks/perceptron.ipynb`](notebooks/perceptron.ipynb) ou acompanhar as explicações e análises a seguir.
 
