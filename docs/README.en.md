@@ -2,7 +2,7 @@
 
 **An educational pure Python implementation to understand the fundamentals of artificial neural networks and machine learning algorithms.**
 
-**English** · [Português do Brasil](../README.md) · [简体中文](README.zh-CN.md)
+**English** · [Português](../README.md) · [简体中文](README.zh-CN.md)
 
 You can explore and run the complete implementation directly in the notebook [`notebooks/perceptron.en.ipynb`](../notebooks/perceptron.en.ipynb) or follow the walkthrough and analysis below.
 
