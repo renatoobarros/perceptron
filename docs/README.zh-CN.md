@@ -2,7 +2,7 @@
 
 基于纯 Python 实现的教学项目，旨在帮助理解人工神经网络与机器学习算法的基本原理。
 
-[English](README.en.md) · [Português do Brasil](../README.md) · 简体中文
+[English](README.en.md) · [Português](../README.md) · 简体中文
 
 您可以直接在 Notebook [`notebooks/perceptron.zh-CN.ipynb`](../notebooks/perceptron.zh-CN.ipynb) 中探索并运行完整实现，或阅读以下解析与实验分析。
 
